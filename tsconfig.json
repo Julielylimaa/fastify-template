@@ -27,5 +27,6 @@
       "@utils/*": ["./src/utils/*"]
     }
   },
-  "include": ["./**/*.ts"]
+  "include": ["./src/**/*.ts", "./prisma/**/*.ts"],
+  "exclude": ["./quiz/**/*", "./node_modules/**/*"]
 }

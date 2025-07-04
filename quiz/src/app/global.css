@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 258 100% 30%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 258 30% 96%;
+    --secondary-foreground: 258 100% 9%;
+    --muted: 258 30% 96%;
+    --muted-foreground: 258 30% 45%;
+    --accent: 258 30% 96%;
+    --accent-foreground: 258 100% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 258 30% 89%;
+    --input: 258 30% 89%;
+    --ring: 258 100% 30%;
+    --chart-1: 258 76% 61%;
+    --chart-2: 280 58% 39%;
+    --chart-3: 240 37% 24%;
+    --chart-4: 270 74% 66%;
+    --chart-5: 260 87% 67%;
+    --radius: 0.5rem;
+  }
+}
+
+/* Custom animations for the purple theme */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes pulse-purple {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-pulse-purple {
+  animation: pulse-purple 2s ease-in-out infinite;
+}
+
+/* Glassmorphism effects with purple theme */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-strong {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Custom purple gradient backgrounds */
+.bg-suriquiz-gradient {
+  background: linear-gradient(135deg, #33276d 0%, #76549e 50%, #05054d 100%);
+}
